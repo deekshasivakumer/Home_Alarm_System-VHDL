@@ -1,0 +1,240 @@
+iMPACT Version: 14.7
+
+iMPACT log file Started on Wed Jun 24 12:33:13 2015
+
+Welcome to iMPACT
+iMPACT Version: 14.7
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : addConfigDevice  -name "uuiu" -path "C:\Course\ExampleAlarm\"
+// *** BATCH CMD : setSubmode -pffserial
+// *** BATCH CMD : setAttribute -configdevice -attr multibootBpiType -value ""
+// *** BATCH CMD : addDesign -version 0 -name "0"
+// *** BATCH CMD : setAttribute -configdevice -attr compressed -value "FALSE"
+// *** BATCH CMD : setAttribute -configdevice -attr autoSize -value "FALSE"
+// *** BATCH CMD : setAttribute -configdevice -attr fileFormat -value "mcs"
+// *** BATCH CMD : setAttribute -configdevice -attr fillValue -value "FF"
+// *** BATCH CMD : setAttribute -configdevice -attr swapBit -value "FALSE"
+// *** BATCH CMD : setAttribute -configdevice -attr dir -value "UP"
+// *** BATCH CMD : setAttribute -configdevice -attr multiboot -value "FALSE"
+// *** BATCH CMD : setAttribute -configdevice -attr spiSelected -value "FALSE"
+// *** BATCH CMD : addPromDevice -p 1 -size 0 -name xcf02s
+'1': Added Device xcf02s successfully.
+----------------------------------------------------------------------
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : setSubmode -pffserial
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : addDeviceChain -index 0
+// *** BATCH CMD : setMode -pff
+------------------------  GUI: Wizard Data Report  ---------------------------
+      Compression : false
+      Fill Value : FF
+      Output Format : mcs
+      Swap Bits : false
+      LoadDirection : UP
+      PROM Basename : uuiu
+      File Location : C:\Course\ExampleAlarm\/
+      Auto Selcet : false
+      Number of Revision : 1
+      Number of PROMs : 1
+      PROM Name : xcf02s,   PROM Size : 2097152 bits
+-------------------------- END of Report ----------------------------
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : addDeviceChain -index 0
+Override chain at index 0.
+Overriding chain at index 0.
+// *** BATCH CMD : addDevice -p 1 -file "C:/Course/ExampleAlarm/top.bit"
+'1': Loading file 'C:/Course/ExampleAlarm/top.bit' ...
+INFO:iMPACT - Elapsed time =      0 sec.
+done.
+INFO:iMPACT:501 - '1': Added Device xc3s100e successfully.
+----------------------------------------------------------------------
+Add one device.11beb// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setMode -ss
+// *** BATCH CMD : setMode -sm
+// *** BATCH CMD : setMode -hw140
+// *** BATCH CMD : setMode -spi
+// *** BATCH CMD : setMode -acecf
+// *** BATCH CMD : setMode -acempm
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : saveProjectFile -file "C:/Course/ExampleAlarm/uuu.ipf"
+// *** BATCH CMD : deletePromDevice -position 1
+// *** BATCH CMD : setCurrentDesign -version 0
+// *** BATCH CMD : deleteDevice -position 1
+// *** BATCH CMD : deleteDesign -version 0
+// *** BATCH CMD : setCurrentDesign -version -1
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : addConfigDevice  -name "Untitled" -path"C:\Course\ExampleAlarm\"
+// *** BATCH CMD : setSubmode -pffserial
+// *** BATCH CMD : setAttribute -configdevice -attr multibootBpiType -value ""
+// *** BATCH CMD : addDesign -version 0 -name "0"
+// *** BATCH CMD : setAttribute -configdevice -attr compressed -value "FALSE"
+// *** BATCH CMD : setAttribute -configdevice -attr autoSize -value "FALSE"
+// *** BATCH CMD : setAttribute -configdevice -attr fileFormat -value "mcs"
+// *** BATCH CMD : setAttribute -configdevice -attr fillValue -value "FF"
+// *** BATCH CMD : setAttribute -configdevice -attr swapBit -value "FALSE"
+// *** BATCH CMD : setAttribute -configdevice -attr dir -value "UP"
+// *** BATCH CMD : setAttribute -configdevice -attr multiboot -value "FALSE"
+// *** BATCH CMD : setAttribute -configdevice -attr spiSelected -value "FALSE"
+// *** BATCH CMD : addPromDevice -p 1 -size 0 -name xcf02s
+'1': Added Device xcf02s successfully.
+----------------------------------------------------------------------
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : setSubmode -pffserial
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : addDeviceChain -index 0
+// *** BATCH CMD : setMode -pff
+------------------------  GUI: Wizard Data Report  ---------------------------
+      Compression : false
+      Fill Value : FF
+      Output Format : mcs
+      Swap Bits : false
+      LoadDirection : UP
+      PROM Basename : Untitled
+      File Location : C:\Course\ExampleAlarm\/
+      Auto Selcet : false
+      Number of Revision : 1
+      Number of PROMs : 1
+      PROM Name : xcf02s,   PROM Size : 2097152 bits
+-------------------------- END of Report ----------------------------
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : addDeviceChain -index 0
+Override chain at index 0.
+Overriding chain at index 0.
+// *** BATCH CMD : addDevice -p 1 -file "C:/Course/ExampleAlarm/top.bit"
+'1': Loading file 'C:/Course/ExampleAlarm/top.bit' ...
+INFO:iMPACT - Elapsed time =      0 sec.
+done.
+INFO:iMPACT:501 - '1': Added Device xc3s100e successfully.
+----------------------------------------------------------------------
+Add one device.11beb// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : setMode -bs
+GUI --- Auto connect to cable...
+// *** BATCH CMD : setCable -port auto
+INFO:iMPACT - Digilent Plugin: Plugin Version: 2.4.4
+INFO:iMPACT - Digilent Plugin: found 1 device(s).
+INFO:iMPACT - Digilent Plugin: opening device: "Basys2", SN:210155647704
+INFO:iMPACT - Digilent Plugin: User Name: Basys2
+INFO:iMPACT - Digilent Plugin: Product Name: Digilent Basys2-100
+INFO:iMPACT - Digilent Plugin: Serial Number: 210155647704
+INFO:iMPACT - Digilent Plugin: Product ID: 00800122
+INFO:iMPACT - Digilent Plugin: Firmware Version: 0116
+INFO:iMPACT - Digilent Plugin: JTAG Port Number: 0
+INFO:iMPACT - Digilent Plugin: JTAG Clock Frequency: 4000000 Hz
+Attempting to identify devices in the boundary-scan chain configuration...
+INFO:iMPACT - Current time: 6/24/2015 12:37:53 PM
+// *** BATCH CMD : Identify -inferir 
+PROGRESS_START - Starting Operation.
+Identifying chain contents...'0': : Manufacturer's ID = Xilinx xcf02s, Version : 13
+INFO:iMPACT:1777 - 
+   Reading C:/Xilinx2/14.7/ISE_DS/ISE/xcf/data/xcf02s.bsd...
+INFO:iMPACT:501 - '1': Added Device xcf02s successfully.
+----------------------------------------------------------------------
+'1': : Manufacturer's ID = Xilinx xc3s100e, Version : 1
+INFO:iMPACT:1777 - 
+   Reading C:/Xilinx2/14.7/ISE_DS/ISE/spartan3e/data/xc3s100e.bsd...
+INFO:iMPACT:501 - '1': Added Device xc3s100e successfully.
+----------------------------------------------------------------------
+done.
+PROGRESS_END - End Operation.
+Elapsed time =      0 sec.
+// *** BATCH CMD : identifyMPM 
+// *** BATCH CMD : assignFile -p 1 -file "C:/Course/ExampleAlarm/top.bit"
+'1': Loading file 'C:/Course/ExampleAlarm/top.bit' ...
+done.
+INFO:iMPACT:2257 - Startup Clock has been changed to 'JtagClk' in the bitstream   stored in memory,
+   but the original bitstream file remains unchanged.
+UserID read from the bitstream file = 0xFFFFFFFF.
+----------------------------------------------------------------------
+INFO:iMPACT:501 - '1': Added Device xc3s100e successfully.
+----------------------------------------------------------------------
+// *** BATCH CMD : setMode -pff
+INFO:iMPACT - Current time: 6/24/2015 12:38:36 PM
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : setSubmode -pffserial
+Total configuration bit size = 581344 bits.
+Total configuration byte size = 72668 bytes.
+// *** BATCH CMD : generate
+0x11bdc (72668) bytes loaded up from 0x0
+Using user-specified prom size of 256K
+Writing file "C:\Course\ExampleAlarm\Untitled.mcs".
+Writing file "C:\Course\ExampleAlarm\Untitled.prm".
+Writing file "C:\Course\ExampleAlarm\Untitled.sig".
+Writing file "C:\Course\ExampleAlarm\Untitled.cfi".
+// *** BATCH CMD : setCurrentDesign -version 0
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : assignFile -p 2 -file "C:/Course/ExampleAlarm/Untitled.mcs"
+'2': Loading file 'C:/Course/ExampleAlarm/Untitled.mcs' ...
+done.
+// *** BATCH CMD : setAttribute -position 2 -attr packageName -value ""
+INFO:iMPACT - Current time: 6/24/2015 12:39:31 PM
+// *** BATCH CMD : Program -p 2 -e -v 
+PROGRESS_START - Starting Operation.
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'2': Erasing device...
+'2': Erasure completed successfully.
+'2': Programming device...
+done.
+'2': Putting device in ISP mode...done.
+'2': Putting device in ISP mode...done.
+'2': Verifying device...done.
+'2': Verification completed successfully.
+'2': Calculated checksum matches expected checksum, 002e21e31
+'2': Putting device in ISP mode...done.
+'2': Putting device in ISP mode...done.
+'2': Setting user-programmable bits...
+done.
+'2': Putting device in ISP mode...done.
+'2': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =     25 sec.
+INFO:iMPACT - Current time: 6/24/2015 12:40:05 PM
+// *** BATCH CMD : Program -p 1 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+PROGRESS_START - Starting Operation.
+Boundary-scan chain validated successfully.
+'1': Programming device...
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+done.
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 0111 1011 1000 0000 0000 0000 0000 
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+INFO:iMPACT:188 - '1': Programming completed successfully.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setMode -ss
+// *** BATCH CMD : setMode -sm
+// *** BATCH CMD : setMode -hw140
+// *** BATCH CMD : setMode -spi
+// *** BATCH CMD : setMode -acecf
+// *** BATCH CMD : setMode -acempm
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : saveProjectFile -file "C:/Course/ExampleAlarm/uuu.ipf"
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : deleteDevice -position 1
+----------------------------------------------------------------------
+// *** BATCH CMD : deleteDevice -position 1
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setMode -ss
+// *** BATCH CMD : setMode -sm
+// *** BATCH CMD : setMode -hw140
+// *** BATCH CMD : setMode -spi
+// *** BATCH CMD : setMode -acecf
+// *** BATCH CMD : setMode -acempm
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : deletePromDevice -position 1
+// *** BATCH CMD : setCurrentDesign -version 0
+// *** BATCH CMD : deleteDevice -position 1
+// *** BATCH CMD : deleteDesign -version 0
+// *** BATCH CMD : setCurrentDesign -version -1

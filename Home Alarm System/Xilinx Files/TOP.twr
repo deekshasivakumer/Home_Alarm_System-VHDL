@@ -1,0 +1,547 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx2\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 4
+-n 3 -fastpaths -xml TOP.twx TOP.ncd -o TOP.twr TOP.pcf -ucf TOP.ucf
+
+Design file:              TOP.ncd
+Physical constraint file: TOP.pcf
+Device,package,speed:     xc3s100e,cp132,-4 (PRODUCTION 1.27 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+================================================================================
+Timing constraint: TS_CLKIN = PERIOD TIMEGRP "CLKIN" 20 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   6.000ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_CLKIN = PERIOD TIMEGRP "CLKIN" 20 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 6.786ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 3.214ns (311.139MHz) (Tdcmpco)
+  Physical resource: Inst_myclock/DCM_SP_INST/CLK2X
+  Logical resource: Inst_myclock/DCM_SP_INST/CLK2X
+  Location pin: DCM_X0Y1.CLK2X
+  Clock network: Inst_myclock/CLK2X_BUF
+--------------------------------------------------------------------------------
+Slack: 14.000ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 20.000ns
+  Low pulse: 10.000ns
+  Low pulse limit: 3.000ns (Tdcmpw_CLKIN_50_100)
+  Physical resource: Inst_myclock/DCM_SP_INST/CLKIN
+  Logical resource: Inst_myclock/DCM_SP_INST/CLKIN
+  Location pin: DCM_X0Y1.CLKIN
+  Clock network: Inst_myclock/CLKIN_IBUFG
+--------------------------------------------------------------------------------
+Slack: 14.000ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 3.000ns (Tdcmpw_CLKIN_50_100)
+  Physical resource: Inst_myclock/DCM_SP_INST/CLKIN
+  Logical resource: Inst_myclock/DCM_SP_INST/CLKIN
+  Location pin: DCM_X0Y1.CLKIN
+  Clock network: Inst_myclock/CLKIN_IBUFG
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_Inst_myclock_CLK2X_BUF = PERIOD TIMEGRP 
+"Inst_myclock_CLK2X_BUF" TS_CLKIN /         2 HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 279 paths analyzed, 67 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   6.267ns.
+--------------------------------------------------------------------------------
+
+Paths for end point Inst_codechecker/state_FSM_FFd3 (SLICE_X18Y19.G4), 12 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     3.733ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Inst_codechecker/Q2_2 (FF)
+  Destination:          Inst_codechecker/state_FSM_FFd3 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      6.265ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.002ns (0.045 - 0.047)
+  Source Clock:         clk rising at 0.000ns
+  Destination Clock:    clk rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Inst_codechecker/Q2_2 to Inst_codechecker/state_FSM_FFd3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y22.YQ      Tcko                  0.652   Inst_codechecker/Q2<3>
+                                                       Inst_codechecker/Q2_2
+    SLICE_X17Y22.F4      net (fanout=2)        0.881   Inst_codechecker/Q2<2>
+    SLICE_X17Y22.X       Tilo                  0.704   Inst_codechecker/keys<2>
+                                                       Inst_codechecker/keys<2>1
+    SLICE_X19Y22.F2      net (fanout=5)        0.447   Inst_codechecker/keys<2>
+    SLICE_X19Y22.X       Tilo                  0.704   Inst_codechecker/state_cmp_eq0001
+                                                       Inst_codechecker/state_cmp_eq00012
+    SLICE_X18Y19.G4      net (fanout=8)        1.592   Inst_codechecker/state_cmp_eq0001
+    SLICE_X18Y19.CLK     Tgck                  1.285   Inst_codechecker/state_FSM_FFd3
+                                                       Inst_codechecker/state_FSM_FFd3-In12
+                                                       Inst_codechecker/state_FSM_FFd3-In1_f5
+                                                       Inst_codechecker/state_FSM_FFd3
+    -------------------------------------------------  ---------------------------
+    Total                                      6.265ns (3.345ns logic, 2.920ns route)
+                                                       (53.4% logic, 46.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     4.000ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Inst_codechecker/Q2_0 (FF)
+  Destination:          Inst_codechecker/state_FSM_FFd3 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      6.000ns (Levels of Logic = 3)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk rising at 0.000ns
+  Destination Clock:    clk rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Inst_codechecker/Q2_0 to Inst_codechecker/state_FSM_FFd3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X20Y23.YQ      Tcko                  0.652   Inst_codechecker/Q2<1>
+                                                       Inst_codechecker/Q2_0
+    SLICE_X19Y22.G4      net (fanout=3)        0.691   Inst_codechecker/Q2<0>
+    SLICE_X19Y22.Y       Tilo                  0.704   Inst_codechecker/state_cmp_eq0001
+                                                       Inst_codechecker/keys<0>1
+    SLICE_X19Y22.F4      net (fanout=7)        0.372   Inst_codechecker/keys<0>
+    SLICE_X19Y22.X       Tilo                  0.704   Inst_codechecker/state_cmp_eq0001
+                                                       Inst_codechecker/state_cmp_eq00012
+    SLICE_X18Y19.G4      net (fanout=8)        1.592   Inst_codechecker/state_cmp_eq0001
+    SLICE_X18Y19.CLK     Tgck                  1.285   Inst_codechecker/state_FSM_FFd3
+                                                       Inst_codechecker/state_FSM_FFd3-In12
+                                                       Inst_codechecker/state_FSM_FFd3-In1_f5
+                                                       Inst_codechecker/state_FSM_FFd3
+    -------------------------------------------------  ---------------------------
+    Total                                      6.000ns (3.345ns logic, 2.655ns route)
+                                                       (55.8% logic, 44.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     4.058ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Inst_codechecker/Q1_0 (FF)
+  Destination:          Inst_codechecker/state_FSM_FFd3 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      5.942ns (Levels of Logic = 3)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk rising at 0.000ns
+  Destination Clock:    clk rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Inst_codechecker/Q1_0 to Inst_codechecker/state_FSM_FFd3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X21Y22.YQ      Tcko                  0.587   Inst_codechecker/Q1<1>
+                                                       Inst_codechecker/Q1_0
+    SLICE_X19Y22.G3      net (fanout=3)        0.698   Inst_codechecker/Q1<0>
+    SLICE_X19Y22.Y       Tilo                  0.704   Inst_codechecker/state_cmp_eq0001
+                                                       Inst_codechecker/keys<0>1
+    SLICE_X19Y22.F4      net (fanout=7)        0.372   Inst_codechecker/keys<0>
+    SLICE_X19Y22.X       Tilo                  0.704   Inst_codechecker/state_cmp_eq0001
+                                                       Inst_codechecker/state_cmp_eq00012
+    SLICE_X18Y19.G4      net (fanout=8)        1.592   Inst_codechecker/state_cmp_eq0001
+    SLICE_X18Y19.CLK     Tgck                  1.285   Inst_codechecker/state_FSM_FFd3
+                                                       Inst_codechecker/state_FSM_FFd3-In12
+                                                       Inst_codechecker/state_FSM_FFd3-In1_f5
+                                                       Inst_codechecker/state_FSM_FFd3
+    -------------------------------------------------  ---------------------------
+    Total                                      5.942ns (3.280ns logic, 2.662ns route)
+                                                       (55.2% logic, 44.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Inst_codechecker/state_FSM_FFd5 (SLICE_X19Y19.G1), 12 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     3.751ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Inst_codechecker/Q2_2 (FF)
+  Destination:          Inst_codechecker/state_FSM_FFd5 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      6.247ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.002ns (0.045 - 0.047)
+  Source Clock:         clk rising at 0.000ns
+  Destination Clock:    clk rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Inst_codechecker/Q2_2 to Inst_codechecker/state_FSM_FFd5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y22.YQ      Tcko                  0.652   Inst_codechecker/Q2<3>
+                                                       Inst_codechecker/Q2_2
+    SLICE_X17Y22.F4      net (fanout=2)        0.881   Inst_codechecker/Q2<2>
+    SLICE_X17Y22.X       Tilo                  0.704   Inst_codechecker/keys<2>
+                                                       Inst_codechecker/keys<2>1
+    SLICE_X19Y22.F2      net (fanout=5)        0.447   Inst_codechecker/keys<2>
+    SLICE_X19Y22.X       Tilo                  0.704   Inst_codechecker/state_cmp_eq0001
+                                                       Inst_codechecker/state_cmp_eq00012
+    SLICE_X19Y19.G1      net (fanout=8)        1.701   Inst_codechecker/state_cmp_eq0001
+    SLICE_X19Y19.CLK     Tgck                  1.158   Inst_codechecker/state_FSM_FFd5
+                                                       Inst_codechecker/state_FSM_FFd5-In12
+                                                       Inst_codechecker/state_FSM_FFd5-In1_f5
+                                                       Inst_codechecker/state_FSM_FFd5
+    -------------------------------------------------  ---------------------------
+    Total                                      6.247ns (3.218ns logic, 3.029ns route)
+                                                       (51.5% logic, 48.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     4.018ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Inst_codechecker/Q2_0 (FF)
+  Destination:          Inst_codechecker/state_FSM_FFd5 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      5.982ns (Levels of Logic = 3)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk rising at 0.000ns
+  Destination Clock:    clk rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Inst_codechecker/Q2_0 to Inst_codechecker/state_FSM_FFd5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X20Y23.YQ      Tcko                  0.652   Inst_codechecker/Q2<1>
+                                                       Inst_codechecker/Q2_0
+    SLICE_X19Y22.G4      net (fanout=3)        0.691   Inst_codechecker/Q2<0>
+    SLICE_X19Y22.Y       Tilo                  0.704   Inst_codechecker/state_cmp_eq0001
+                                                       Inst_codechecker/keys<0>1
+    SLICE_X19Y22.F4      net (fanout=7)        0.372   Inst_codechecker/keys<0>
+    SLICE_X19Y22.X       Tilo                  0.704   Inst_codechecker/state_cmp_eq0001
+                                                       Inst_codechecker/state_cmp_eq00012
+    SLICE_X19Y19.G1      net (fanout=8)        1.701   Inst_codechecker/state_cmp_eq0001
+    SLICE_X19Y19.CLK     Tgck                  1.158   Inst_codechecker/state_FSM_FFd5
+                                                       Inst_codechecker/state_FSM_FFd5-In12
+                                                       Inst_codechecker/state_FSM_FFd5-In1_f5
+                                                       Inst_codechecker/state_FSM_FFd5
+    -------------------------------------------------  ---------------------------
+    Total                                      5.982ns (3.218ns logic, 2.764ns route)
+                                                       (53.8% logic, 46.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     4.076ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Inst_codechecker/Q1_0 (FF)
+  Destination:          Inst_codechecker/state_FSM_FFd5 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      5.924ns (Levels of Logic = 3)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk rising at 0.000ns
+  Destination Clock:    clk rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Inst_codechecker/Q1_0 to Inst_codechecker/state_FSM_FFd5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X21Y22.YQ      Tcko                  0.587   Inst_codechecker/Q1<1>
+                                                       Inst_codechecker/Q1_0
+    SLICE_X19Y22.G3      net (fanout=3)        0.698   Inst_codechecker/Q1<0>
+    SLICE_X19Y22.Y       Tilo                  0.704   Inst_codechecker/state_cmp_eq0001
+                                                       Inst_codechecker/keys<0>1
+    SLICE_X19Y22.F4      net (fanout=7)        0.372   Inst_codechecker/keys<0>
+    SLICE_X19Y22.X       Tilo                  0.704   Inst_codechecker/state_cmp_eq0001
+                                                       Inst_codechecker/state_cmp_eq00012
+    SLICE_X19Y19.G1      net (fanout=8)        1.701   Inst_codechecker/state_cmp_eq0001
+    SLICE_X19Y19.CLK     Tgck                  1.158   Inst_codechecker/state_FSM_FFd5
+                                                       Inst_codechecker/state_FSM_FFd5-In12
+                                                       Inst_codechecker/state_FSM_FFd5-In1_f5
+                                                       Inst_codechecker/state_FSM_FFd5
+    -------------------------------------------------  ---------------------------
+    Total                                      5.924ns (3.153ns logic, 2.771ns route)
+                                                       (53.2% logic, 46.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Inst_codechecker/state_FSM_FFd5 (SLICE_X19Y19.F1), 12 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     3.792ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Inst_codechecker/Q2_2 (FF)
+  Destination:          Inst_codechecker/state_FSM_FFd5 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      6.206ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.002ns (0.045 - 0.047)
+  Source Clock:         clk rising at 0.000ns
+  Destination Clock:    clk rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Inst_codechecker/Q2_2 to Inst_codechecker/state_FSM_FFd5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y22.YQ      Tcko                  0.652   Inst_codechecker/Q2<3>
+                                                       Inst_codechecker/Q2_2
+    SLICE_X17Y22.F4      net (fanout=2)        0.881   Inst_codechecker/Q2<2>
+    SLICE_X17Y22.X       Tilo                  0.704   Inst_codechecker/keys<2>
+                                                       Inst_codechecker/keys<2>1
+    SLICE_X19Y22.F2      net (fanout=5)        0.447   Inst_codechecker/keys<2>
+    SLICE_X19Y22.X       Tilo                  0.704   Inst_codechecker/state_cmp_eq0001
+                                                       Inst_codechecker/state_cmp_eq00012
+    SLICE_X19Y19.F1      net (fanout=8)        1.660   Inst_codechecker/state_cmp_eq0001
+    SLICE_X19Y19.CLK     Tfck                  1.158   Inst_codechecker/state_FSM_FFd5
+                                                       Inst_codechecker/state_FSM_FFd5-In11
+                                                       Inst_codechecker/state_FSM_FFd5-In1_f5
+                                                       Inst_codechecker/state_FSM_FFd5
+    -------------------------------------------------  ---------------------------
+    Total                                      6.206ns (3.218ns logic, 2.988ns route)
+                                                       (51.9% logic, 48.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     4.059ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Inst_codechecker/Q2_0 (FF)
+  Destination:          Inst_codechecker/state_FSM_FFd5 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      5.941ns (Levels of Logic = 3)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk rising at 0.000ns
+  Destination Clock:    clk rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Inst_codechecker/Q2_0 to Inst_codechecker/state_FSM_FFd5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X20Y23.YQ      Tcko                  0.652   Inst_codechecker/Q2<1>
+                                                       Inst_codechecker/Q2_0
+    SLICE_X19Y22.G4      net (fanout=3)        0.691   Inst_codechecker/Q2<0>
+    SLICE_X19Y22.Y       Tilo                  0.704   Inst_codechecker/state_cmp_eq0001
+                                                       Inst_codechecker/keys<0>1
+    SLICE_X19Y22.F4      net (fanout=7)        0.372   Inst_codechecker/keys<0>
+    SLICE_X19Y22.X       Tilo                  0.704   Inst_codechecker/state_cmp_eq0001
+                                                       Inst_codechecker/state_cmp_eq00012
+    SLICE_X19Y19.F1      net (fanout=8)        1.660   Inst_codechecker/state_cmp_eq0001
+    SLICE_X19Y19.CLK     Tfck                  1.158   Inst_codechecker/state_FSM_FFd5
+                                                       Inst_codechecker/state_FSM_FFd5-In11
+                                                       Inst_codechecker/state_FSM_FFd5-In1_f5
+                                                       Inst_codechecker/state_FSM_FFd5
+    -------------------------------------------------  ---------------------------
+    Total                                      5.941ns (3.218ns logic, 2.723ns route)
+                                                       (54.2% logic, 45.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     4.117ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Inst_codechecker/Q1_0 (FF)
+  Destination:          Inst_codechecker/state_FSM_FFd5 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      5.883ns (Levels of Logic = 3)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk rising at 0.000ns
+  Destination Clock:    clk rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Inst_codechecker/Q1_0 to Inst_codechecker/state_FSM_FFd5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X21Y22.YQ      Tcko                  0.587   Inst_codechecker/Q1<1>
+                                                       Inst_codechecker/Q1_0
+    SLICE_X19Y22.G3      net (fanout=3)        0.698   Inst_codechecker/Q1<0>
+    SLICE_X19Y22.Y       Tilo                  0.704   Inst_codechecker/state_cmp_eq0001
+                                                       Inst_codechecker/keys<0>1
+    SLICE_X19Y22.F4      net (fanout=7)        0.372   Inst_codechecker/keys<0>
+    SLICE_X19Y22.X       Tilo                  0.704   Inst_codechecker/state_cmp_eq0001
+                                                       Inst_codechecker/state_cmp_eq00012
+    SLICE_X19Y19.F1      net (fanout=8)        1.660   Inst_codechecker/state_cmp_eq0001
+    SLICE_X19Y19.CLK     Tfck                  1.158   Inst_codechecker/state_FSM_FFd5
+                                                       Inst_codechecker/state_FSM_FFd5-In11
+                                                       Inst_codechecker/state_FSM_FFd5-In1_f5
+                                                       Inst_codechecker/state_FSM_FFd5
+    -------------------------------------------------  ---------------------------
+    Total                                      5.883ns (3.153ns logic, 2.730ns route)
+                                                       (53.6% logic, 46.4% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_Inst_myclock_CLK2X_BUF = PERIOD TIMEGRP "Inst_myclock_CLK2X_BUF" TS_CLKIN /
+        2 HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point Inst_codechecker/Q3_1 (SLICE_X20Y22.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.013ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               Inst_codechecker/Q2_1 (FF)
+  Destination:          Inst_codechecker/Q3_1 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.013ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk rising at 10.000ns
+  Destination Clock:    clk rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: Inst_codechecker/Q2_1 to Inst_codechecker/Q3_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X20Y23.XQ      Tcko                  0.474   Inst_codechecker/Q2<1>
+                                                       Inst_codechecker/Q2_1
+    SLICE_X20Y22.BX      net (fanout=2)        0.405   Inst_codechecker/Q2<1>
+    SLICE_X20Y22.CLK     Tckdi       (-Th)    -0.134   Inst_codechecker/Q3<1>
+                                                       Inst_codechecker/Q3_1
+    -------------------------------------------------  ---------------------------
+    Total                                      1.013ns (0.608ns logic, 0.405ns route)
+                                                       (60.0% logic, 40.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Inst_codechecker/Q2_2 (SLICE_X16Y22.BY), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.054ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               Inst_codechecker/Q1_2 (FF)
+  Destination:          Inst_codechecker/Q2_2 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.054ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk rising at 10.000ns
+  Destination Clock:    clk rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: Inst_codechecker/Q1_2 to Inst_codechecker/Q2_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X17Y23.YQ      Tcko                  0.470   Inst_codechecker/Q1<3>
+                                                       Inst_codechecker/Q1_2
+    SLICE_X16Y22.BY      net (fanout=2)        0.432   Inst_codechecker/Q1<2>
+    SLICE_X16Y22.CLK     Tckdi       (-Th)    -0.152   Inst_codechecker/Q2<3>
+                                                       Inst_codechecker/Q2_2
+    -------------------------------------------------  ---------------------------
+    Total                                      1.054ns (0.622ns logic, 0.432ns route)
+                                                       (59.0% logic, 41.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Inst_codechecker/Q2_1 (SLICE_X20Y23.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.197ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               Inst_codechecker/Q1_1 (FF)
+  Destination:          Inst_codechecker/Q2_1 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.197ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk rising at 10.000ns
+  Destination Clock:    clk rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: Inst_codechecker/Q1_1 to Inst_codechecker/Q2_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X21Y22.XQ      Tcko                  0.473   Inst_codechecker/Q1<1>
+                                                       Inst_codechecker/Q1_1
+    SLICE_X20Y23.BX      net (fanout=2)        0.590   Inst_codechecker/Q1<1>
+    SLICE_X20Y23.CLK     Tckdi       (-Th)    -0.134   Inst_codechecker/Q2<1>
+                                                       Inst_codechecker/Q2_1
+    -------------------------------------------------  ---------------------------
+    Total                                      1.197ns (0.607ns logic, 0.590ns route)
+                                                       (50.7% logic, 49.3% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_Inst_myclock_CLK2X_BUF = PERIOD TIMEGRP "Inst_myclock_CLK2X_BUF" TS_CLKIN /
+        2 HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 8.348ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 0.826ns (Tcl)
+  Physical resource: Inst_codechecker/state_FSM_FFd3/CLK
+  Logical resource: Inst_codechecker/state_FSM_FFd3/CK
+  Location pin: SLICE_X18Y19.CLK
+  Clock network: clk
+--------------------------------------------------------------------------------
+Slack: 8.348ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 10.000ns
+  High pulse: 5.000ns
+  High pulse limit: 0.826ns (Tch)
+  Physical resource: Inst_codechecker/state_FSM_FFd3/CLK
+  Logical resource: Inst_codechecker/state_FSM_FFd3/CK
+  Location pin: SLICE_X18Y19.CLK
+  Clock network: clk
+--------------------------------------------------------------------------------
+Slack: 8.348ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 1.652ns (605.327MHz) (Tcp)
+  Physical resource: Inst_codechecker/state_FSM_FFd3/CLK
+  Logical resource: Inst_codechecker/state_FSM_FFd3/CK
+  Location pin: SLICE_X18Y19.CLK
+  Clock network: clk
+--------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Derived Constraints for TS_CLKIN
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_CLKIN                       |     20.000ns|      6.000ns|     12.534ns|            0|            0|            0|          279|
+| TS_Inst_myclock_CLK2X_BUF     |     10.000ns|      6.267ns|          N/A|            0|            0|          279|            0|
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock CLKIN
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLKIN          |    6.267|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 279 paths, 0 nets, and 129 connections
+
+Design statistics:
+   Minimum period:   6.267ns{1}   (Maximum frequency: 159.566MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Tue Jun 16 17:21:28 2015 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 167 MB
+
+
+

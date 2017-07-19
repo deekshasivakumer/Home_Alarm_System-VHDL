@@ -1,0 +1,20 @@
+NET "RSTIN" LOC = P11;
+
+# PlanAhead Generated physical constraints 
+NET "CLKIN" LOC = B8;
+NET "keysin[0]" LOC = G12;
+NET "keysin[1]" LOC = C11;
+NET "keysin[2]" LOC = M4;
+NET "keysin[3]" LOC = A7;
+NET "led_code_out[2]" LOC = M11;
+NET "led_code_out[1]" LOC = P7;
+NET "led_code_out[0]" LOC = P6;
+NET "alarm_out" LOC = G1;
+NET "armed_ledout" LOC = N5;
+NET "disarmed_ledout" LOC = M5;
+NET "sensors" LOC = N3;
+
+NET "CLKIN" TNM_NET = CLKIN;
+TIMESPEC TS_CLKIN = PERIOD "CLKIN" 20 ns HIGH 50%;
+
+NET "CLKIN" CLOCK_DEDICATED_ROUTE = FALSE;

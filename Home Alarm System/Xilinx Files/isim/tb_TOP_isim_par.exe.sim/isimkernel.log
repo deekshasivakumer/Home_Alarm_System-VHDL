@@ -1,0 +1,31 @@
+Command line:
+   tb_TOP_isim_par.exe
+     -simmode  gui
+     -sdfmax  /uut/=netgen/par/TOP_timesim.sdf
+     -sdfroot  /uut
+     -simrunnum  0
+     -socket  62275
+
+Tue Jun 16 17:29:09 2015
+
+
+ Elaboration Time: 0.46875 sec
+
+ Current Memory Usage: 883.192 Meg
+
+ Total Signals          : 1909
+ Total Nets             : 1299
+ Total Signal Drivers   : 1236
+ Total Blocks           : 391
+ Total Primitive Blocks : 217
+ Total Processes        : 1180
+ Total Traceable Variables  : 2577
+ Total Scalar Nets and Variables : 11746
+Total Line Count : 4096
+
+ Total Simulation Time: 0.53125 sec
+
+ Current Memory Usage: 411.271 Meg
+
+Tue Jun 16 17:31:48 2015
+

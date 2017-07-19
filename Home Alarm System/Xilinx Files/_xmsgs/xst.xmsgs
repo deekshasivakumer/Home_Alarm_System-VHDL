@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/TOP</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Course/ExampleAlarm/TOP.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/deeks/Desktop/VHDL/ExampleAlarm/TOP.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/TOP/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Course/ExampleAlarm/TOP.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/deeks/Desktop/VHDL/ExampleAlarm/TOP.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/codechecker</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Course/ExampleAlarm/codechecker.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/deeks/Desktop/VHDL/ExampleAlarm/codechecker.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/codechecker/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Course/ExampleAlarm/codechecker.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/deeks/Desktop/VHDL/ExampleAlarm/codechecker.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/myclock</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Course/ExampleAlarm/myclock.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/deeks/Desktop/VHDL/ExampleAlarm/myclock.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/myclock/BEHAVIORAL</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Course/ExampleAlarm/myclock.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/deeks/Desktop/VHDL/ExampleAlarm/myclock.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/deeks/Desktop/VHDL/ExampleAlarm/TOP.vhd</arg>&quot; line <arg fmt="%d" index="2">50</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">CLKIN_IBUFG_OUT</arg>&apos; of component &apos;<arg fmt="%s" index="4">myclock</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/deeks/Desktop/VHDL/ExampleAlarm/TOP.vhd</arg>&quot; line <arg fmt="%d" index="2">50</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">CLK0_OUT</arg>&apos; of component &apos;<arg fmt="%s" index="4">myclock</arg>&apos;.
+</msg>
+
+</messages>

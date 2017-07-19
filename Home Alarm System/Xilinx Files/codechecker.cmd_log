@@ -1,0 +1,1 @@
+vhdtdtfi -prj ExampleAlarm -o C:/Course/ExampleAlarm/codechecker.vhi -module codechecker -template C:/Xilinx2/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work codechecker.vhd 

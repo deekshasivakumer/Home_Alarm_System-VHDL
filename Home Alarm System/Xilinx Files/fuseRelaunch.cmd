@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Course/ExampleAlarm/tb_TOP_isim_par.exe" -prj "C:/Course/ExampleAlarm/tb_TOP_par.prj" "work.tb_TOP" 
